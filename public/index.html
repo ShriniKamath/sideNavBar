@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-heroComponentTree-production</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="components/navbar/navbar.js"></script>
+</head>
+
+<body ng-app="componentExample">
+    <span ng-controller="appCtrl">
+
+    <navi-bar>
+      <collapsed-component>
+          <div>
+              <md-button class="md-icon-button"  ng-click="doSomething('first Expended')" aria-label="More">
+                  <md-icon md-svg-icon="images/icons/ic_done_black_24px.svg"></md-icon>
+              </md-button>
+          </div>
+          <div>
+              <md-button class="md-icon-button" ng-click="doSomething('first Expended')" aria-label="More">
+                  <md-icon md-svg-icon="images/icons/ic_find_replace_black_24px.svg"></md-icon>
+              </md-button>
+          </div>
+          <div>
+              <md-button class="md-icon-button" ng-click="doSomething('first Expended')" aria-label="More">
+                  <md-icon md-svg-icon="images/icons/ic_playlist_add_check_black_24px.svg"></md-icon>
+              </md-button>
+          </div>
+      </collapsed-component>
+        <expanded-component>
+          <md-button ng-click="doSomething('first Expended')">
+              <md-icon md-svg-icon="images/icons/ic_done_black_24px.svg"></md-icon>
+              Requested by Admin
+          </md-button>
+
+          <md-button  ng-click="doSomething('first Expended')">
+              <md-icon md-svg-icon="images/icons/ic_find_replace_black_24px.svg"></md-icon>
+              Requested by Users
+          </md-button>
+              <md-button ng-click="doSomething('first Expended')">
+                  <md-icon md-svg-icon="images/icons/ic_playlist_add_check_black_24px.svg"></md-icon>
+                  Requested by Admin
+              </md-button>
+        </expanded-component>
+    </navi-bar>
+  </span>
+</body>
+
+</html>

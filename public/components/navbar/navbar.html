@@ -1,0 +1,17 @@
+<md-sidenav md-component-id="left" layout="column" layout-sm="column" layout-align="start start" layout-wrap>
+  <div style="background:#F0E68C; width: 100%;height: 100%;">
+    <md-button class="md-icon-button" ng-click="naviCtrl.openLeftMenu()" aria-label="More">
+        <md-icon md-svg-icon="images/icons/ic_arrow_back_black_24px.svg"></md-icon>
+    </md-button>
+    <div ng-transclude='expandedSide'></div>
+</div>
+</md-sidenav>
+
+<md-content layout="column" style="height: 100%;" layout-sm="start" layout-align="start start" layout-wrap="">
+  <div style="background:#F0E68C;height: 100%;">
+    <md-button class="md-icon-button" ng-click="naviCtrl.openLeftMenu()" aria-label="More">
+        <md-icon md-svg-icon="images/icons/ic_forward_black_24px.svg"></md-icon>
+    </md-button>
+    <div ng-transclude='collapsedSide'></div>
+  </div>
+</md-content>
